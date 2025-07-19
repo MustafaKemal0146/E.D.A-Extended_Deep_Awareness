@@ -1,12 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkxf8cdjnfqp2"]
+[gd_scene load_steps=8 format=3 uid="uid://bkxf8cdjnfqp2"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_x8j7k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1"]
-font_size = 32
-font_color = Color(1, 1, 1, 1)
+font_size = 48
+font_color = Color(0, 1, 0.533333, 1)
+outline_size = 2
+outline_color = Color(0, 0.4, 0.2, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qxzr"]
+[sub_resource type="LabelSettings" id="LabelSettings_2"]
+font_size = 18
+font_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3"]
+font_size = 16
+font_color = Color(0, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
 bg_color = Color(0.146078, 0.388235, 0.921569, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
@@ -14,11 +24,23 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
-bg_color = Color(0.2, 0.2, 0.2, 1)
+bg_color = Color(0.2, 0.3, 0.4, 0.8)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+bg_color = Color(0.1, 0.1, 0.2, 0.9)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 1, 0.533333, 0.5)
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -32,127 +54,224 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.0627451, 0.0941176, 0.156863, 1)
+color = Color(0.05, 0.05, 0.1, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="BackgroundPattern" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0.2, 0.1, 0.1)
+
+[node name="IntroContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="IntroContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="IntroContainer/CenterContainer"]
+layout_mode = 2
+custom_constants/separation = 30
+
+[node name="EDALogo" type="Label" parent="IntroContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "E.D.A"
+label_settings = SubResource("LabelSettings_1")
+horizontal_alignment = 1
+
+[node name="SubTitle" type="Label" parent="IntroContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Extended Deep Awareness"
+label_settings = SubResource("LabelSettings_2")
+horizontal_alignment = 1
+
+[node name="SystemStatus" type="Label" parent="IntroContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "SYSTEM INITIALIZING..."
+label_settings = SubResource("LabelSettings_3")
+horizontal_alignment = 1
+
+[node name="BootProgress" type="Label" parent="IntroContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "BOOT PROGRESS: 0%"
+label_settings = SubResource("LabelSettings_3")
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="IntroContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "BAŞLAT"
+theme_override_styles/normal = SubResource("StyleBoxFlat_1")
+
+[node name="GameContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameContainer"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -500.0
-offset_top = -300.0
-offset_right = 500.0
-offset_bottom = 300.0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
 custom_constants/separation = 20
 
-[node name="Header" type="VBoxContainer" parent="VBoxContainer"]
+[node name="Header" type="VBoxContainer" parent="GameContainer/VBoxContainer"]
 layout_mode = 2
 custom_constants/separation = 10
 
-[node name="Title" type="Label" parent="VBoxContainer/Header"]
+[node name="Title" type="Label" parent="GameContainer/VBoxContainer/Header"]
 layout_mode = 2
 text = "E.D.A - Extended Deep Awareness"
 label_settings = SubResource("LabelSettings_1")
 horizontal_alignment = 1
 
-[node name="Subtitle" type="Label" parent="VBoxContainer/Header"]
+[node name="Subtitle" type="Label" parent="GameContainer/VBoxContainer/Header"]
 layout_mode = 2
 text = "2045 - Küresel Kriz Yönetimi Simülasyonu"
 horizontal_alignment = 1
 modulate = Color(0.8, 0.8, 0.8, 1)
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="GameContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="StatsContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="StatsContainer" type="HBoxContainer" parent="GameContainer/VBoxContainer"]
 layout_mode = 2
 custom_constants/separation = 40
 
-[node name="EthicsPanel" type="VBoxContainer" parent="VBoxContainer/StatsContainer"]
+[node name="EthicsPanel" type="VBoxContainer" parent="GameContainer/VBoxContainer/StatsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EthicsLabel" type="Label" parent="VBoxContainer/StatsContainer/EthicsPanel"]
+[node name="EthicsLabel" type="Label" parent="GameContainer/VBoxContainer/StatsContainer/EthicsPanel"]
 layout_mode = 2
 text = "ETİK"
 horizontal_alignment = 1
 
-[node name="EthicsValue" type="Label" parent="VBoxContainer/StatsContainer/EthicsPanel"]
+[node name="EthicsValue" type="Label" parent="GameContainer/VBoxContainer/StatsContainer/EthicsPanel"]
 layout_mode = 2
 text = "0"
 horizontal_alignment = 1
 
-[node name="PowerPanel" type="VBoxContainer" parent="VBoxContainer/StatsContainer"]
+[node name="PowerPanel" type="VBoxContainer" parent="GameContainer/VBoxContainer/StatsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PowerLabel" type="Label" parent="VBoxContainer/StatsContainer/PowerPanel"]
+[node name="PowerLabel" type="Label" parent="GameContainer/VBoxContainer/StatsContainer/PowerPanel"]
 layout_mode = 2
 text = "GÜÇ"
 horizontal_alignment = 1
 
-[node name="PowerValue" type="Label" parent="VBoxContainer/StatsContainer/PowerPanel"]
+[node name="PowerValue" type="Label" parent="GameContainer/VBoxContainer/StatsContainer/PowerPanel"]
 layout_mode = 2
 text = "50"
 horizontal_alignment = 1
 
-[node name="AffectionPanel" type="VBoxContainer" parent="VBoxContainer/StatsContainer"]
+[node name="AffectionPanel" type="VBoxContainer" parent="GameContainer/VBoxContainer/StatsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="AffectionLabel" type="Label" parent="VBoxContainer/StatsContainer/AffectionPanel"]
+[node name="AffectionLabel" type="Label" parent="GameContainer/VBoxContainer/StatsContainer/AffectionPanel"]
 layout_mode = 2
 text = "SEVGİ"
 horizontal_alignment = 1
 
-[node name="AffectionValue" type="Label" parent="VBoxContainer/StatsContainer/AffectionPanel"]
+[node name="AffectionValue" type="Label" parent="GameContainer/VBoxContainer/StatsContainer/AffectionPanel"]
 layout_mode = 2
 text = "0"
 horizontal_alignment = 1
 
-[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="GameContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="ContentContainer" type="VBoxContainer" parent="VBoxContainer"]
+[node name="ContentContainer" type="HBoxContainer" parent="GameContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-custom_constants/separation = 20
+custom_constants/separation = 30
 
-[node name="ScenarioText" type="RichTextLabel" parent="VBoxContainer/ContentContainer"]
+[node name="EDAAvatar" type="Panel" parent="GameContainer/VBoxContainer/ContentContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 0
+custom_minimum_size = Vector2(150, 200)
+theme_override_styles/panel = SubResource("StyleBoxFlat_3")
+
+[node name="AvatarLabel" type="Label" parent="GameContainer/VBoxContainer/ContentContainer/EDAAvatar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 10.0
+text = "E.D.A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScenarioPanel" type="Panel" parent="GameContainer/VBoxContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_2")
+
+[node name="ScenarioText" type="RichTextLabel" parent="GameContainer/VBoxContainer/ContentContainer/ScenarioPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
 bbcode_enabled = true
 text = "E.D.A sistemi çevrimiçi. İlk küresel kriz raporu alındı..."
 fit_content = true
 
-[node name="DecisionContainer" type="VBoxContainer" parent="VBoxContainer/ContentContainer"]
+[node name="Particles" type="Control" parent="GameContainer/VBoxContainer/ContentContainer"]
+layout_mode = 2
+
+[node name="DecisionContainer" type="VBoxContainer" parent="GameContainer/VBoxContainer"]
 layout_mode = 2
 custom_constants/separation = 15
 
-[node name="Decision1" type="Button" parent="VBoxContainer/ContentContainer/DecisionContainer"]
+[node name="Decision1" type="Button" parent="GameContainer/VBoxContainer/DecisionContainer"]
 layout_mode = 2
 text = "Karar 1"
-theme_override_styles/normal = SubResource("StyleBoxFlat_1qxzr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1")
 
-[node name="Decision2" type="Button" parent="VBoxContainer/ContentContainer/DecisionContainer"]
+[node name="Decision2" type="Button" parent="GameContainer/VBoxContainer/DecisionContainer"]
 layout_mode = 2
 text = "Karar 2"
 theme_override_styles/normal = SubResource("StyleBoxFlat_2")
 
-[node name="Decision3" type="Button" parent="VBoxContainer/ContentContainer/DecisionContainer"]
+[node name="Decision3" type="Button" parent="GameContainer/VBoxContainer/DecisionContainer"]
 layout_mode = 2
 text = "Karar 3"
 theme_override_styles/normal = SubResource("StyleBoxFlat_2")
 
-[node name="NextButton" type="Button" parent="VBoxContainer"]
+[node name="NextButton" type="Button" parent="GameContainer/VBoxContainer"]
 layout_mode = 2
 text = "Devam Et"
 visible = false
-theme_override_styles/normal = SubResource("StyleBoxFlat_1qxzr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1")
 
-[connection signal="pressed" from="VBoxContainer/ContentContainer/DecisionContainer/Decision1" to="." method="_on_decision_pressed" binds= [0]]
-[connection signal="pressed" from="VBoxContainer/ContentContainer/DecisionContainer/Decision2" to="." method="_on_decision_pressed" binds= [1]]
-[connection signal="pressed" from="VBoxContainer/ContentContainer/DecisionContainer/Decision3" to="." method="_on_decision_pressed" binds= [2]]
-[connection signal="pressed" from="VBoxContainer/NextButton" to="." method="_on_next_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="IntroContainer/CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="GameContainer/VBoxContainer/DecisionContainer/Decision1" to="." method="_on_decision_pressed" binds= [0]]
+[connection signal="pressed" from="GameContainer/VBoxContainer/DecisionContainer/Decision2" to="." method="_on_decision_pressed" binds= [1]]
+[connection signal="pressed" from="GameContainer/VBoxContainer/DecisionContainer/Decision3" to="." method="_on_decision_pressed" binds= [2]]
+[connection signal="pressed" from="GameContainer/VBoxContainer/NextButton" to="." method="_on_next_pressed"]

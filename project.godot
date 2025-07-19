@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="E.D.A - Extended Deep Awareness"
-config/description="Etik simülasyon oyunu - 2045 küresel kriz yönetimi"
+config/description="Advanced AI Ethics Simulation - 2045 Global Crisis Management"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
@@ -23,6 +23,8 @@ window/size/viewport_height=720
 window/size/resizable=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/size/window_width_override=1280
+window/size/window_height_override=720
 
 [input]
 
@@ -33,7 +35,13 @@ ui_accept={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="UI"
+2d_physics/layer_2="Effects"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=2
 renderer/rendering_method="forward_plus"
+environment/defaults/default_clear_color=Color(0.05, 0.05, 0.1, 1)

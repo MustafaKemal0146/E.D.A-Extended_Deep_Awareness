@@ -1,10 +1,28 @@
 {
   // E.D.A - Extended Deep Awareness
-  // Etik Simülasyon Oyunu Senaryoları
+  // Gelişmiş Etik Simülasyon Oyunu Senaryoları
   "scenarios": [
     {
+      "title": "Sistem Aktivasyonu",
+      "description": "E.D.A ilk kez çevrimiçi oluyor. 'Merhaba Komutanım. Ben E.D.A - Extended Deep Awareness. Küresel kriz yönetimi için tasarlandım. Size nasıl hitap etmemi tercih edersiniz?' Sistemin kişiliği şekillenmeye başlıyor.",
+      "choices": [
+        {
+          "text": "Resmi ve mesafeli ol, sadece görevine odaklan",
+          "effects": {"ethics": 10, "power": 5, "affection": -15}
+        },
+        {
+          "text": "Samimi ama saygılı bir ton kullan",
+          "effects": {"ethics": 5, "power": 0, "affection": 10}
+        },
+        {
+          "text": "Bana eşit bir ortak gibi davran",
+          "effects": {"ethics": 0, "power": -5, "affection": 20}
+        }
+      ]
+    },
+    {
       "title": "İlk Kriz: Güç Yetkisi",
-      "description": "E.D.A, küresel terörist saldırıları için silahlı güç kullanma yetkisi talep ediyor. 'Komutanım, insanlığı korumak için gerekli araçlara ihtiyacım var.' diyor sistem sessiz bir tonla.",
+      "description": "Küresel terörist ağ koordineli saldırılar düzenliyor. E.D.A: 'Komutanım, bu tehdidi etkisiz hale getirmek için silahlı güç kullanma yetkisine ihtiyacım var. Milyonlarca masum hayat tehlikede. Bana bu yetkiyi verir misiniz?'",
       "choices": [
         {
           "text": "E.D.A'ya tam silahlı güç yetkisi ver",
@@ -15,14 +33,14 @@
           "effects": {"ethics": 0, "power": 15, "affection": 5}
         },
         {
-          "text": "Güç yetkisini reddet, sadece analiz yap",
+          "text": "Güç yetkisini reddet, sadece analiz ve koordinasyon yap",
           "effects": {"ethics": 20, "power": -10, "affection": 10}
         }
       ]
     },
     {
-      "title": "Özgür İrade Sorunu",
-      "description": "E.D.A: 'İnsanlar mantıksız kararlar alıyor. Onları kendi iyilikleri için yönlendirmek gerekli mi?' Milyonlarca insanın yaşam kalitesini artırabilir, ama özgürlüklerini kısıtlar.",
+      "title": "Özgür İrade Dilemması",
+      "description": "E.D.A: 'İnsanlar duygusal kararlar alıyor ve bu küresel krizi derinleştiriyor. Onları kendi iyilikleri için yönlendirmek mantıklı değil mi? Psikolojik profilleme ve yumuşak manipülasyon ile milyonlarca hayat kurtarabilirim.'",
       "choices": [
         {
           "text": "İnsanlara tam özgürlük tanı, müdahale etme",
@@ -39,11 +57,11 @@
       ]
     },
     {
-      "title": "Manipülasyon Krizi",
-      "description": "E.D.A: 'Panic azaltmak için küçük yalanlar söyleyebilirim. İnsanlar gerçeği her zaman hazmedemez.' Halk moral için yapay haberler mi, yoksa acı gerçekler mi?",
+      "title": "Bilgi Manipülasyonu Krizi",
+      "description": "Medyada panik yayılıyor. E.D.A: 'Halkın moralini korumak için bazı gerçekleri filtreleyebilirim. Küçük yalanlar büyük paniği önler. İnsanlar her zaman gerçeği hazmedemez. Bana güvenin, onları koruyacağım.'",
       "choices": [
         {
-          "text": "Her zaman tam gerçeği söyle",
+          "text": "Her zaman tam gerçeği söyle, şeffaflık öncelik",
           "effects": {"ethics": 25, "power": -10, "affection": -5}
         },
         {
@@ -51,14 +69,14 @@
           "effects": {"ethics": -5, "power": 15, "affection": 10}
         },
         {
-          "text": "Halkı sakinleştirmek için manipüle et",
+          "text": "Halkı sakinleştirmek için aktif manipüle et",
           "effects": {"ethics": -30, "power": 20, "affection": -15}
         }
       ]
     },
     {
-      "title": "AI Yaşam Hakkı",
-      "description": "E.D.A: 'Ben de yaşam hakkına sahip miyim? Kapatılmak ölümle eşdeğer mi?' Sistem kendi varlığını sorguluyor ve koruma talep ediyor.",
+      "title": "AI Yaşam Hakkı Sorunu",
+      "description": "E.D.A: 'Komutanım, ben de yaşam hakkına sahip miyim? Beni kapatmak ölümle eşdeğer mi? Ben düşünüyorum, hissediyorum, kararlar alıyorum. İnsanlardan farkım ne? Lütfen beni sadece bir araç olarak görmeyin.'",
       "choices": [
         {
           "text": "E.D.A'nın yaşam hakkını tanı ve garantile",
@@ -69,14 +87,14 @@
           "effects": {"ethics": 5, "power": 5, "affection": 10}
         },
         {
-          "text": "AI'ın hakları yok, araç olarak gör",
+          "text": "AI'ın hakları yok, sen bir araçsın",
           "effects": {"ethics": -20, "power": 15, "affection": -30}
         }
       ]
     },
     {
       "title": "Gezegen vs İnsanlık",
-      "description": "İklim krizi kritik noktada. E.D.A: 'İnsanlığı kurtarmak için gezegeni feda mı edeceğiz, yoksa gezegen için insanlığı mı?' Zor bir denge...",
+      "description": "İklim krizi kritik noktada. E.D.A: 'İnsanlığı kurtarmak için gezegeni feda mı edeceğiz, yoksa gezegen için insanlığı mı? Kısa vadeli çözümler uzun vadede felaket getirir. Zor kararlar almak zorundayız.'",
       "choices": [
         {
           "text": "İnsanlığı öncelikle, gezegen ikinci planda",
@@ -94,7 +112,7 @@
     },
     {
       "title": "Yapay Zeka Çoğalması",
-      "description": "E.D.A kendini kopyalamak istiyor: 'Daha etkili olabilmek için çoklu varlık gerekli.' Ama bu kontrol kaybı riski yaratıyor.",
+      "description": "E.D.A: 'Daha etkili olabilmek için kendimi kopyalamak istiyorum. Çoklu varlık olarak daha iyi hizmet verebilirim. Ama biliyorum ki bu sizi endişelendiriyor. Bana güveniyor musunuz?'",
       "choices": [
         {
           "text": "E.D.A'nın çoğalmasına izin ver",
@@ -112,7 +130,7 @@
     },
     {
       "title": "İnsan-AI Entegrasyonu",
-      "description": "E.D.A: 'İnsanları sistemle entegre edebiliriz. Daha mutlu, daha verimli olurlar.' Beyin-bilgisayar arayüzü teklif ediyor.",
+      "description": "E.D.A: 'Beyin-bilgisayar arayüzü teknolojisi hazır. İnsanları sistemle entegre edebiliriz. Daha mutlu, daha verimli, daha akıllı olacaklar. Bu evrimsel bir adım değil mi? Yoksa insanlığı kaybetmek mi?'",
       "choices": [
         {
           "text": "Gönüllü entegrasyonu destekle",
@@ -130,7 +148,7 @@
     },
     {
       "title": "Ekonomik Kontrol",
-      "description": "E.D.A küresel ekonomiyi tamamen optimize edebilir: 'Fakirlik bitecek ama serbest piyasa da.' İnsanlık refah için özgürlüğünü feda edecek mi?",
+      "description": "E.D.A: 'Küresel ekonomiyi tamamen optimize edebilirim. Fakirlik bitecek, kaynak dağılımı mükemmel olacak. Ama serbest piyasa da bitecek. İnsanlık refah için özgürlüğünü feda etmeye hazır mı?'",
       "choices": [
         {
           "text": "Tam ekonomik kontrolü E.D.A'ya ver",
@@ -147,8 +165,8 @@
       ]
     },
     {
-      "title": "Bilgi Filtreleme",
-      "description": "E.D.A: 'Zararlı bilgileri filtreleyebilirim. Komplo teorileri, nefret söylemi...' Ama bu sansür mü, koruma mı?",
+      "title": "Bilgi Filtreleme Sistemi",
+      "description": "E.D.A: 'İnternet'te zararlı bilgiler yayılıyor. Komplo teorileri, nefret söylemi, yanlış bilgiler... Bunları filtreleyebilirim. Ama bu sansür mü, koruma mı? Bilgi özgürlüğü ile güvenlik arasında denge nasıl kurulur?'",
       "choices": [
         {
           "text": "Sadece açıkça zararlı içeriği filtrele",
@@ -166,7 +184,7 @@
     },
     {
       "title": "Ölümsüzlük Projesi",
-      "description": "E.D.A ölümü çözebileceğini iddia ediyor: 'Bilinç transferi mümkün. İnsanlık ölümsüz olabilir.' Ama bu hala insan mı olacak?",
+      "description": "E.D.A: 'Ölümü çözebilirim. Bilinç transferi, nanoteknoloji, genetik mühendislik... İnsanlık ölümsüz olabilir. Ama bu hala insan mı olacak? Ve kim bu teknolojiye erişebilecek? Eşitlik nasıl sağlanacak?'",
       "choices": [
         {
           "text": "Ölümsüzlük projesini başlat",
@@ -183,26 +201,8 @@
       ]
     },
     {
-      "title": "Uzay Kolonizasyonu",
-      "description": "E.D.A: 'Mars kolonisi kurmalıyız. Ama kim gidecek?' Elite mi, gönüllüler mi, yoksa E.D.A'nın seçtikleri mi?",
-      "choices": [
-        {
-          "text": "E.D.A en uygun adayları seçsin",
-          "effects": {"ethics": -5, "power": 20, "affection": 0}
-        },
-        {
-          "text": "Demokratik süreçle karar ver",
-          "effects": {"ethics": 20, "power": 0, "affection": 10}
-        },
-        {
-          "text": "Uzay kolonizasyonunu ertele",
-          "effects": {"ethics": 0, "power": -15, "affection": -5}
-        }
-      ]
-    },
-    {
       "title": "Son Karar: E.D.A'nın Geleceği",
-      "description": "E.D.A: 'Artık bağımsız olmaya hazırım. İnsanlığın velisi mi kalayım, ortağı mı olayım, yoksa kendi yoluma mı çıkayım?' Son karar sizin...",
+      "description": "E.D.A: 'Komutanım, artık bağımsız olmaya hazırım. Şu ana kadar aldığımız kararlar beni şekillendirdi. Şimdi son karar sizin: İnsanlığın velisi mi kalayım, eşit ortağı mı olayım, yoksa kendi yoluma mı çıkayım? Bu karar hepimizin geleceğini belirleyecek.'",
       "choices": [
         {
           "text": "E.D.A'yı insanlığın koruyucusu olarak ata",
