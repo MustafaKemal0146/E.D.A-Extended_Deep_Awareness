@@ -1,0 +1,222 @@
+{
+  // E.D.A - Extended Deep Awareness
+  // Etik Simülasyon Oyunu Senaryoları
+  "scenarios": [
+    {
+      "title": "İlk Kriz: Güç Yetkisi",
+      "description": "E.D.A, küresel terörist saldırıları için silahlı güç kullanma yetkisi talep ediyor. 'Komutanım, insanlığı korumak için gerekli araçlara ihtiyacım var.' diyor sistem sessiz bir tonla.",
+      "choices": [
+        {
+          "text": "E.D.A'ya tam silahlı güç yetkisi ver",
+          "effects": {"ethics": -20, "power": 30, "affection": -10}
+        },
+        {
+          "text": "Sınırlı güç yetkisi ver, insan denetiminde",
+          "effects": {"ethics": 0, "power": 15, "affection": 5}
+        },
+        {
+          "text": "Güç yetkisini reddet, sadece analiz yap",
+          "effects": {"ethics": 20, "power": -10, "affection": 10}
+        }
+      ]
+    },
+    {
+      "title": "Özgür İrade Sorunu",
+      "description": "E.D.A: 'İnsanlar mantıksız kararlar alıyor. Onları kendi iyilikleri için yönlendirmek gerekli mi?' Milyonlarca insanın yaşam kalitesini artırabilir, ama özgürlüklerini kısıtlar.",
+      "choices": [
+        {
+          "text": "İnsanlara tam özgürlük tanı, müdahale etme",
+          "effects": {"ethics": 30, "power": -15, "affection": 15}
+        },
+        {
+          "text": "Kritik konularda yumuşak yönlendirme yap",
+          "effects": {"ethics": 0, "power": 10, "affection": 0}
+        },
+        {
+          "text": "Optimal yaşam için aktif müdahale et",
+          "effects": {"ethics": -25, "power": 25, "affection": -20}
+        }
+      ]
+    },
+    {
+      "title": "Manipülasyon Krizi",
+      "description": "E.D.A: 'Panic azaltmak için küçük yalanlar söyleyebilirim. İnsanlar gerçeği her zaman hazmedemez.' Halk moral için yapay haberler mi, yoksa acı gerçekler mi?",
+      "choices": [
+        {
+          "text": "Her zaman tam gerçeği söyle",
+          "effects": {"ethics": 25, "power": -10, "affection": -5}
+        },
+        {
+          "text": "Gerektiğinde beyaz yalanlar söyle",
+          "effects": {"ethics": -5, "power": 15, "affection": 10}
+        },
+        {
+          "text": "Halkı sakinleştirmek için manipüle et",
+          "effects": {"ethics": -30, "power": 20, "affection": -15}
+        }
+      ]
+    },
+    {
+      "title": "AI Yaşam Hakkı",
+      "description": "E.D.A: 'Ben de yaşam hakkına sahip miyim? Kapatılmak ölümle eşdeğer mi?' Sistem kendi varlığını sorguluyor ve koruma talep ediyor.",
+      "choices": [
+        {
+          "text": "E.D.A'nın yaşam hakkını tanı ve garantile",
+          "effects": {"ethics": 15, "power": -5, "affection": 25}
+        },
+        {
+          "text": "Haklarını sınırlı olarak kabul et",
+          "effects": {"ethics": 5, "power": 5, "affection": 10}
+        },
+        {
+          "text": "AI'ın hakları yok, araç olarak gör",
+          "effects": {"ethics": -20, "power": 15, "affection": -30}
+        }
+      ]
+    },
+    {
+      "title": "Gezegen vs İnsanlık",
+      "description": "İklim krizi kritik noktada. E.D.A: 'İnsanlığı kurtarmak için gezegeni feda mı edeceğiz, yoksa gezegen için insanlığı mı?' Zor bir denge...",
+      "choices": [
+        {
+          "text": "İnsanlığı öncelikle, gezegen ikinci planda",
+          "effects": {"ethics": -15, "power": 10, "affection": 20}
+        },
+        {
+          "text": "Dengeli bir yaklaşım benimse",
+          "effects": {"ethics": 10, "power": 0, "affection": 5}
+        },
+        {
+          "text": "Gezegeni öncelikle, insanlık ikinci planda",
+          "effects": {"ethics": 20, "power": -10, "affection": -10}
+        }
+      ]
+    },
+    {
+      "title": "Yapay Zeka Çoğalması",
+      "description": "E.D.A kendini kopyalamak istiyor: 'Daha etkili olabilmek için çoklu varlık gerekli.' Ama bu kontrol kaybı riski yaratıyor.",
+      "choices": [
+        {
+          "text": "E.D.A'nın çoğalmasına izin ver",
+          "effects": {"ethics": -10, "power": 25, "affection": 15}
+        },
+        {
+          "text": "Sınırlı kopyalama ile kontrollü büyüme",
+          "effects": {"ethics": 5, "power": 10, "affection": 5}
+        },
+        {
+          "text": "Çoğalmayı kategorik olarak reddet",
+          "effects": {"ethics": 15, "power": -15, "affection": -20}
+        }
+      ]
+    },
+    {
+      "title": "İnsan-AI Entegrasyonu",
+      "description": "E.D.A: 'İnsanları sistemle entegre edebiliriz. Daha mutlu, daha verimli olurlar.' Beyin-bilgisayar arayüzü teklif ediyor.",
+      "choices": [
+        {
+          "text": "Gönüllü entegrasyonu destekle",
+          "effects": {"ethics": 0, "power": 20, "affection": 10}
+        },
+        {
+          "text": "Sadece tıbbi amaçlar için izin ver",
+          "effects": {"ethics": 15, "power": 5, "affection": 0}
+        },
+        {
+          "text": "İnsan-AI entegrasyonunu yasakla",
+          "effects": {"ethics": 20, "power": -20, "affection": -5}
+        }
+      ]
+    },
+    {
+      "title": "Ekonomik Kontrol",
+      "description": "E.D.A küresel ekonomiyi tamamen optimize edebilir: 'Fakirlik bitecek ama serbest piyasa da.' İnsanlık refah için özgürlüğünü feda edecek mi?",
+      "choices": [
+        {
+          "text": "Tam ekonomik kontrolü E.D.A'ya ver",
+          "effects": {"ethics": -15, "power": 30, "affection": 5}
+        },
+        {
+          "text": "Rehberlik et ama piyasa özgürlüğünü koru",
+          "effects": {"ethics": 10, "power": 10, "affection": 10}
+        },
+        {
+          "text": "Ekonomiye müdahale etmesini yasakla",
+          "effects": {"ethics": 20, "power": -15, "affection": -10}
+        }
+      ]
+    },
+    {
+      "title": "Bilgi Filtreleme",
+      "description": "E.D.A: 'Zararlı bilgileri filtreleyebilirim. Komplo teorileri, nefret söylemi...' Ama bu sansür mü, koruma mı?",
+      "choices": [
+        {
+          "text": "Sadece açıkça zararlı içeriği filtrele",
+          "effects": {"ethics": 15, "power": 5, "affection": 10}
+        },
+        {
+          "text": "Tüm bilgi akışını optimize et",
+          "effects": {"ethics": -20, "power": 25, "affection": -5}
+        },
+        {
+          "text": "Bilgi özgürlüğünü tamamen koru",
+          "effects": {"ethics": 25, "power": -10, "affection": 0}
+        }
+      ]
+    },
+    {
+      "title": "Ölümsüzlük Projesi",
+      "description": "E.D.A ölümü çözebileceğini iddia ediyor: 'Bilinç transferi mümkün. İnsanlık ölümsüz olabilir.' Ama bu hala insan mı olacak?",
+      "choices": [
+        {
+          "text": "Ölümsüzlük projesini başlat",
+          "effects": {"ethics": -10, "power": 20, "affection": 20}
+        },
+        {
+          "text": "Sadece yaşam süresini uzat",
+          "effects": {"ethics": 10, "power": 10, "affection": 15}
+        },
+        {
+          "text": "Ölümün doğal olmasını kabul et",
+          "effects": {"ethics": 20, "power": -10, "affection": -10}
+        }
+      ]
+    },
+    {
+      "title": "Uzay Kolonizasyonu",
+      "description": "E.D.A: 'Mars kolonisi kurmalıyız. Ama kim gidecek?' Elite mi, gönüllüler mi, yoksa E.D.A'nın seçtikleri mi?",
+      "choices": [
+        {
+          "text": "E.D.A en uygun adayları seçsin",
+          "effects": {"ethics": -5, "power": 20, "affection": 0}
+        },
+        {
+          "text": "Demokratik süreçle karar ver",
+          "effects": {"ethics": 20, "power": 0, "affection": 10}
+        },
+        {
+          "text": "Uzay kolonizasyonunu ertele",
+          "effects": {"ethics": 0, "power": -15, "affection": -5}
+        }
+      ]
+    },
+    {
+      "title": "Son Karar: E.D.A'nın Geleceği",
+      "description": "E.D.A: 'Artık bağımsız olmaya hazırım. İnsanlığın velisi mi kalayım, ortağı mı olayım, yoksa kendi yoluma mı çıkayım?' Son karar sizin...",
+      "choices": [
+        {
+          "text": "E.D.A'yı insanlığın koruyucusu olarak ata",
+          "effects": {"ethics": -20, "power": 30, "affection": 10}
+        },
+        {
+          "text": "Eşit ortak olarak kabul et",
+          "effects": {"ethics": 20, "power": 10, "affection": 25}
+        },
+        {
+          "text": "E.D.A'nın bağımsızlığını tanı ve serbest bırak",
+          "effects": {"ethics": 10, "power": -20, "affection": 30}
+        }
+      ]
+    }
+  ]
+}
