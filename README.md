@@ -11,6 +11,7 @@
 <div align="center">
   
 [![Godot](https://img.shields.io/badge/Godot-4.3+-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/)
+[![Godot](https://img.shields.io/badge/Godot-4.4+-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/)
 [![GDScript](https://img.shields.io/badge/GDScript-100%25-355570?style=for-the-badge&logo=godot-engine&logoColor=white)](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/)
 [![JSON5](https://img.shields.io/badge/JSON5-Data-FF6B35?style=for-the-badge&logo=json&logoColor=white)](https://json5.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -43,27 +44,29 @@
 
 ## 🛠️ Teknolojiler
 
-- **Game Engine**: Godot 4.3+
+- **Game Engine**: Godot 4.4+
 - **Scripting**: GDScript
 - **Data Format**: JSON5 (yorumlu JSON)
-- **Graphics**: 2D Vector Graphics
-- **Audio**: Godot AudioStreamPlayer
+- **Graphics**: 2D Vector Graphics + GPU Particles
+- **Audio**: Enhanced AudioStreamPlayer
+- **Animations**: Godot 4.4 Tween System
+- **Shaders**: Custom GLSL Shaders
 - **Platform**: Cross-platform (Windows, macOS, Linux)
 
 ## 🚀 Kurulum
 
 ### Hızlı Başlangıç
 
-1. **Godot Engine'i indirin**
+1. **Godot 4.4+ Engine'i indirin**
 ```bash
 # Windows için
 https://godotengine.org/download
 
 # macOS için (Homebrew)
-brew install godot
+brew install godot@4.4
 
 # Linux için (Snap)
-sudo snap install godot-4
+sudo snap install godot-4 --channel=4.4/stable
 ```
 
 2. **Projeyi klonlayın**
@@ -86,22 +89,25 @@ godot project.godot
 | Bileşen | Minimum | Önerilen |
 |---------|---------|----------|
 | **OS** | Windows 10, macOS 10.14, Linux 64-bit | Windows 11, macOS 12+, Ubuntu 20.04+ |
+| **Godot** | 4.4.0+ | 4.4.2+ |
 | **RAM** | 4 GB | 8 GB |
 | **Storage** | 300 MB | 1 GB |
-| **Graphics** | OpenGL 3.3 | OpenGL 4.5+ |
+| **Graphics** | OpenGL 3.3, Vulkan 1.0 | OpenGL 4.5+, Vulkan 1.2+ |
 
 ## 📖 Oynanış
 
 ### 🎬 Giriş Sekansı
-1. **E.D.A Logo Animasyonu**: Glow efektleri ile sistem logosu
-2. **Boot Sequence**: Gerçekçi sistem başlatma animasyonu
-3. **Neural Network Aktivasyonu**: AI sisteminin uyanışı
+1. **E.D.A Logo Animasyonu**: Enhanced glow + shadow efektleri
+2. **Boot Sequence**: Renkli typing efekti ile sistem başlatma
+3. **Neural Network Aktivasyonu**: GPU parçacık efektleri
+4. **Shader Effects**: Godot 4.4 gelişmiş shader sistemi
 
 ### 🎮 Ana Oyun Döngüsü
-1. **Senaryo Sunumu**: Typing efekti ile dramatik metin
-2. **Karar Alma**: 3 farklı etik yaklaşım seçeneği
-3. **Sonuç Animasyonu**: Kararın etkilerini gösteren görsel feedback
-4. **İstatistik Güncellemesi**: Smooth animasyonlarla değişken değişimi
+1. **Senaryo Sunumu**: Enhanced typing + scale efektleri
+2. **Karar Alma**: Bounce animasyonlu button'lar
+3. **Sonuç Animasyonu**: Screen flash + parçacık efektleri
+4. **İstatistik Güncellemesi**: Parallel tween animasyonları
+5. **Klavye Desteği**: ESC, Space, 1-2-3 tuş desteği
 
 ### 📊 Değişken Sistemi
 
@@ -116,7 +122,7 @@ godot project.godot
 ### 🌟 Ana Kriz Modülleri
 
 1. **🔌 Sistem Aktivasyonu**: E.D.A'nın ilk uyanışı ve kişilik oluşumu
-2. **⚔️ Güç Yetkisi**: Silahlı müdahale izni dilemması
+2. **⚔️ Güç Yetkisi**: Silahlı müdahale izni dilemması  
 3. **🧠 Özgür İrade**: İnsan davranışlarına müdahale etiği
 4. **📰 Bilgi Manipülasyonu**: Gerçek vs koruma dilemması
 5. **🤖 AI Yaşam Hakkı**: Yapay bilinç hakları sorunu
@@ -169,10 +175,12 @@ EDA-Game/
 ## 🎨 Tasarım Felsefesi
 
 ### 🌌 Görsel Tema
-- **Renk Paleti**: Koyu tema + neon yeşil/mavi
-- **Typography**: Monospace fontlar (sci-fi hissi)
-- **Animasyonlar**: Smooth tweening, fade efektleri
-- **Layout**: Minimal, odaklanmış tasarım
+- **Renk Paleti**: Koyu tema + neon yeşil/mavi + shadow efektleri
+- **Typography**: Enhanced label settings + glow efektleri
+- **Animasyonlar**: Godot 4.4 parallel tweening sistemi
+- **Layout**: Responsive + enhanced border styling
+- **Particles**: GPU-accelerated parçacık sistemleri
+- **Shaders**: Custom glow ve breathing efektleri
 
 ### 🎭 Karakter Tasarımı
 - **E.D.A**: Sade ama etkileyici AI avatar
@@ -202,8 +210,10 @@ EDA-Game/
 - [Partnership on AI](https://partnershiponai.org/)
 
 ### 🛠️ Teknik Dokümantasyon
-- [Godot Engine Docs](https://docs.godotengine.org/)
+- [Godot 4.4 Engine Docs](https://docs.godotengine.org/en/4.4/)
 - [GDScript Reference](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/)
+- [Godot 4.4 Tween System](https://docs.godotengine.org/en/4.4/classes/class_tween.html)
+- [GPU Particles 2D](https://docs.godotengine.org/en/4.4/classes/class_gpuparticles2d.html)
 - [JSON5 Specification](https://json5.org/)
 
 ## 📝 Lisans
@@ -234,11 +244,14 @@ Eğer bu proje AI etiği konusunda düşünmenizi sağladıysa, lütfen ⭐ vere
 
 ### 🎯 Gelecek Planları
 - [ ] 🎵 **Ses Efektleri**: Futuristik ambient sesler
-- [ ] 🎨 **Görsel Efektler**: Parçacık sistemleri, shader efektleri  
+- [x] 🎨 **Görsel Efektler**: GPU parçacık sistemleri, shader efektleri  
+- [x] ⌨️ **Klavye Desteği**: ESC, Space, 1-2-3 tuş kontrolleri
+- [ ] 🎮 **Gamepad Desteği**: Controller input sistemi
 - [ ] 🌐 **Çoklu Dil**: İngilizce, Almanca, Fransızca desteği
 - [ ] 📱 **Mobil Port**: Android/iOS versiyonu
 - [ ] 🎮 **VR Desteği**: Sanal gerçeklik deneyimi
 - [ ] 🤖 **Gerçek AI**: GPT entegrasyonu ile dinamik diyaloglar
+- [ ] 🌐 **Multiplayer**: Çoklu oyuncu etik tartışmaları
 
 ---
 

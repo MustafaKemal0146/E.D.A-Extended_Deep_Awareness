@@ -7,14 +7,20 @@ font_size = 48
 font_color = Color(0, 1, 0.533333, 1)
 outline_size = 2
 outline_color = Color(0, 0.4, 0.2, 1)
+shadow_size = 4
+shadow_color = Color(0, 0.8, 0.4, 0.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_2"]
 font_size = 18
 font_color = Color(0.8, 0.8, 0.8, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3"]
 font_size = 16
 font_color = Color(0, 1, 1, 1)
+shadow_size = 2
+shadow_color = Color(0, 0.4, 0.4, 0.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
 bg_color = Color(0.146078, 0.388235, 0.921569, 1)
@@ -22,6 +28,11 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.6, 1, 0.8)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
 bg_color = Color(0.2, 0.3, 0.4, 0.8)
@@ -29,6 +40,11 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.5, 0.6, 0.6)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
 bg_color = Color(0.1, 0.1, 0.2, 0.9)
@@ -41,7 +57,30 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 1, 0.533333, 0.5)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.3)
 
+[sub_resource type="Animation" id="Animation_1"]
+resource_name = "idle_glow"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameContainer/VBoxContainer/ContentContainer/EDAAvatar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.5, 1, 1, 1), Color(0.8, 1, 1, 1), Color(0.5, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1"]
+_data = {
+"idle_glow": SubResource("Animation_1")
+}
 [node name="Main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -49,6 +88,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_x8j7k")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1")
+}
+autoplay = "idle_glow"
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -96,12 +140,14 @@ layout_mode = 2
 text = "SYSTEM INITIALIZING..."
 label_settings = SubResource("LabelSettings_3")
 horizontal_alignment = 1
+bbcode_enabled = true
 
 [node name="BootProgress" type="Label" parent="IntroContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "BOOT PROGRESS: 0%"
 label_settings = SubResource("LabelSettings_3")
 horizontal_alignment = 1
+bbcode_enabled = true
 
 [node name="StartButton" type="Button" parent="IntroContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -240,8 +286,12 @@ bbcode_enabled = true
 text = "E.D.A sistemi çevrimiçi. İlk küresel kriz raporu alındı..."
 fit_content = true
 
-[node name="Particles" type="Control" parent="GameContainer/VBoxContainer/ContentContainer"]
+[node name="Particles" type="GPUParticles2D" parent="GameContainer/VBoxContainer/ContentContainer"]
 layout_mode = 2
+emitting = true
+amount = 100
+lifetime = 2.0
+visibility_rect = Rect2(-100, -100, 200, 200)
 
 [node name="DecisionContainer" type="VBoxContainer" parent="GameContainer/VBoxContainer"]
 layout_mode = 2
