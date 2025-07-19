@@ -167,9 +167,9 @@ EDA-Game/
 ├── icon.svg                  # Proje ikonu
 ├── readme.md                 # Bu dosya
 └── assets/                   # Gelecekteki ses/görsel dosyalar
-    ├── audio/
-    ├── images/
-    └── fonts/
+	├── audio/
+	├── images/
+	└── fonts/
 ```
 
 ## 🎨 Tasarım Felsefesi
