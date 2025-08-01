@@ -1,8 +1,10 @@
+<div align="center">
+
+<img src="img/E.D.A.png" alt="E.D.A Logo" width="300"/>
+
 # 🤖 E.D.A - Extended Deep Awareness MCP Tool
 
 **🚀 Your data's personal detective that finds hidden secrets and tells you what they mean:** [Get started now](#-installation)
-
-<div align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&width=1000&lines=E.D.A+-+Extended+Deep+Awareness;CSV+%7C+JSON+%7C+SQL+%7C+S3+%7C+Everything;AI-Powered+Data+Analysis;From+Chaos+to+Insights+in+Seconds" alt="Typing SVG" />
 
@@ -32,11 +34,7 @@
 
 **In other words:** Data goes in → Magic happens → You get "Aha!" moments! ✨
 
-<div align="center">
-<img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E.D.A Data Analysis Flow" width="600"/>
-<br/>
-<em>From messy spreadsheets to crystal-clear insights</em>
-</div>
+
 
 > **🔥 The Ultimate Data Analysis Tool:** E.D.A transforms your boring spreadsheets into actionable business intelligence. No PhD in statistics required - just upload your data and watch the magic happen!
 
@@ -58,9 +56,7 @@ python src/mcp_server.py
 
 ## ✨ What Can This Thing Do?
 
-<div align="center">
-<img src="https://images.pexels.com/photos/8439093/pexels-photo-8439093.jpeg?auto=compress&cs=tinysrgb&w=600" alt="E.D.A Features" width="600"/>
-</div>
+
 
 ### 🔍 **Data Detective Work**
 - **Eats any data format**: CSV, JSON, SQL databases, even AWS S3 buckets
@@ -88,11 +84,7 @@ python src/mcp_server.py
 
 ## 🏗️ What's Inside The Box?
 
-<div align="center">
-<img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E.D.A Architecture" width="600"/>
-<br/>
-<em>The magic happens in these organized folders</em>
-</div>
+
 
 ### 📁 **The File Family Tree**
 
