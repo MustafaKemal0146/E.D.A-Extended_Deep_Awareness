@@ -616,4 +616,22 @@ This project is licensed under the MIT License - basically, you can do whatever 
 <img src="https://img.shields.io/badge/Anyone_with_Data-✅-green?style=flat-square" alt="Anyone with Data"/>
 </p>
 
+<<<<<<< HEAD
 </div>
+=======
+### **9. Documentation**  
+- **User Guide:** How to use via CLI, MCP, or web UI.  
+- **API Docs:** MCP endpoints and parameters.  
+- **Examples:** Jupyter notebooks for common workflows.  
+- **Contribution Guide:** For community extensions.  
+
+---
+
+### **10. Future Enhancements**  
+- **Real-Time Analysis:** Stream processing with `Apache Kafka`.  
+- **AutoML:** Integrate `Auto-sklearn` for automated model selection.  
+- **Multi-Modal Data:** Support images/audio (e.g., analyze satellite imagery + tabular data).  
+- **Explainable AI:** SHAP/LIME integration for model transparency.  
+
+--- 
+>>>>>>> e3776f3a57b83b7bd615191572d4296428e62889
