@@ -235,4 +235,4 @@ class PreprocessingPipeline:
     
     def get_transformation_summary(self) -> List[str]:
         """Get summary of all transformations applied"""
-        return self.transformations_applied.copy()
+        return self.transformations_applied.copy
